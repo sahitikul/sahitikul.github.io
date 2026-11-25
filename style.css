@@ -27,8 +27,8 @@ header, main, footer {
 
 header { padding-top: 3.5rem; padding-bottom: 1rem; }
 
-h1, h2, h3 {
-  font-family: "Fraunces", serif;
+h1, h2, h3, h4 {
+  font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.25;
 }
 
@@ -79,6 +79,11 @@ h2::after {
 }
 
 .card p { margin: 0.5rem 0; }
+
+.card h3.small-title {
+  font-size: 1rem;
+}
+
 
 .meta {
   display: inline-block;
