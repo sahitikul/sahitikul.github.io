@@ -1,0 +1,127 @@
+:root {
+  --bg: #fdf6f9;
+  --card: #ffffff;
+  --text: #3b3347;
+  --muted: #8a7f99;
+  --accent: #c77dba;
+  --accent-soft: #f3e1f0;
+  --border: #f0dcea;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header, main, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header { padding-top: 3.5rem; padding-bottom: 1rem; }
+
+h1, h2, h3 {
+  font-family: "Fraunces", serif;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin: 2.5rem 0 1rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 0.4rem;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 14px rgba(199, 125, 186, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(199, 125, 186, 0.2);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.3rem;
+}
+
+.card p { margin: 0.5rem 0; }
+
+.meta {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.8rem;
+  border-radius: 999px;
+}
+
+ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+li { margin-bottom: 0.3rem; }
+li::marker { color: var(--accent); }
+
+.links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  padding: 0.5rem 1.3rem;
+  border-radius: 999px;
+  transition: transform 0.2s ease;
+}
+
+.links a:hover { transform: scale(1.06); }
+
+a:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  h1 { font-size: 2.2rem; }
+  .card { padding: 1.1rem 1.2rem; }
+}
